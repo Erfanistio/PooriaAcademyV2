@@ -20,7 +20,6 @@
           <li><a href="/pages/coaches.html">Coaches</a></li>
         </ul>
       </nav>
-      <img src="images/icons8-change-theme-48.png" alt="theme" class="theme-icon" id="theme-icon">
       <a href="./pages/fa.html" class="languages" id="languages-icon-menu">
         <img src="images/languages-light.png" alt="theme" class="languages-icon" id="LanguageIcon">
       </a>
@@ -36,6 +35,8 @@
         <li>
           <a href="callto:09111716951">Sign Up</a>
         </li>
+        <li><a href="/pages/coaches.html">Coaches</a></li>
+
       </ul>
       <a href="pages/fa.html" class="languages" id="languages-icon-hamburger-menu">
         <img src="images/languages-dark.png" alt="theme" class="languages-icon" id="LanguageIconSec">
@@ -229,103 +230,5 @@
     crossIcon.addEventListener('click', closeMenu);
   });
   </script>
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const themeIcons = document.querySelectorAll('.theme-icon');
-  const body = document.body;
-
-  // Retrieve theme preference from local storage
-  const savedTheme = localStorage.getItem('theme');
-
-  // Check if a theme preference is saved in local storage
-  if (savedTheme) {
-    body.classList.add(savedTheme); // Apply the saved theme class
-  }
-
-  // Check if theme preference has been updated
-  const themeUpdated = localStorage.getItem('themeUpdated');
-  if (themeUpdated) {
-    // Clear the flag indicating that the theme preference has been updated
-    localStorage.removeItem('themeUpdated');
-
-    // Save the updated theme preference to local storage for other pages
-    localStorage.setItem('theme', savedTheme);
-  }
-
-  // Add event listener to theme icons
-  themeIcons.forEach(icon => {
-    icon.addEventListener('click', () => {
-      body.classList.toggle('dark-mode'); // Toggle dark mode class on body
-
-      // Save theme preference to local storage
-      if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark-mode');
-      } else {
-        localStorage.setItem('theme', 'light-mode'); // If not in dark mode, clear the saved theme
-      }
-
-      // Set flag indicating that the theme preference has been updated
-      localStorage.setItem('themeUpdated', 'true');
-
-      // Change logo based on the theme
-      const themeLogo = document.getElementById('headerLogo');
-      if (body.classList.contains('dark-mode')) {
-        themeLogo.src = 'images/logo-header-p-dark.png';
-      } else {
-        themeLogo.src = 'images/logo-header-p-light.png';
-      }
-      const patrickStatusText = document.getElementById('patrickStatusText');
-      if (body.classList.contains('dark-mode')) {
-        patrickStatusText.src = 'images/pooria-badmintoon-dark.png';
-      } else {
-        patrickStatusText.src = 'images/pooria-badminton-light.png';
-      }
-      const footerLogo = document.getElementById('footerLogo');
-      if (body.classList.contains('dark-mode')) {
-        footerLogo.src = 'images/footer-logo-dark.png';
-      } else {
-        footerLogo.src = 'images/footer-logo-light.png';
-      }
-      const githubIcon = document.getElementById('githubIcon');
-      if (body.classList.contains('dark-mode')) {
-        githubIcon.src = 'images/github-dark.png';
-      } else {
-        githubIcon.src = 'images/github-light.png';
-      }
-      const telegramIcon = document.getElementById('telegramIcon');
-      if (body.classList.contains('dark-mode')) {
-        telegramIcon.src = 'images/telegram-dark.png';
-      } else {
-        telegramIcon.src = 'images/telegram-light.png';
-      }
-      const LanguageIcon = document.getElementById('LanguageIcon');
-      if (body.classList.contains('dark-mode')) {
-        LanguageIcon.src = 'images/languages-dark.png';
-      } else {
-        LanguageIcon.src = 'images/languages-light.png';
-      }
-      const hamburgerIcon = document.getElementById('hamburgerIcon');
-      if (body.classList.contains('dark-mode')) {
-        hamburgerIcon.src = 'images/hamburger-dark.png';
-      } else {
-        hamburgerIcon.src = 'images/hamburger-light.png';
-      }
-      const LanguageHamburger = document.getElementById('languages-icon-hamburger-menu');
-      if (body.classList.contains('dark-mode')) {
-        LanguageHamburger.src = 'images/languages-dark.png';
-      } else {
-        LanguageHamburger.src = 'images/languages-light.png';
-      }
-      const LanguageIconSec = document.getElementById('LanguageIconSec');
-      if (body.classList.contains('dark-mode')) {
-        LanguageIconSec.src = 'images/languages-dark.png';
-      } else {
-        LanguageIconSec.src = 'images/languages-light.png';
-      }
-    });
-  });
-});
-
-    </script>
 </body>
 </html>

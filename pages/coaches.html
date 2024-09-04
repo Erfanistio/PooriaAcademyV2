@@ -32,6 +32,7 @@
             <li>
               <a href="callto:09111716951">ثبت نام</a>
             </li>
+            <li><a href="../index.html">صفحه اصلی</a></li>
           </ul>
         </div>
       </div>  
@@ -84,5 +85,28 @@
             © !This project is made by Erfan Akrami. No Copyright Allowed 
           </p>
       </div></footer>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const hamburgerMenu = document.querySelector('.hamburger-menu');
+          const hamburgerIcon = document.querySelector('.hamburger-icon');
+          const crossIcon = document.querySelector('.cross-icon');
+      
+          // Function to open the menu
+          function openMenu() {
+            hamburgerMenu.style.transform = 'translateX(0)';
+          }
+      
+          // Function to close the menu
+          function closeMenu() {
+            hamburgerMenu.style.transform = 'translateX(200%)';
+          }
+      
+          // Event listener for the hamburger icon to open the menu
+          hamburgerIcon.addEventListener('click', openMenu);
+      
+          // Event listener for the cross icon to close the menu
+          crossIcon.addEventListener('click', closeMenu);
+        });
+        </script>
 </body>
 </html>

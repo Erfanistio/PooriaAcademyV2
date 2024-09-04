@@ -7,9 +7,7 @@
   src: url(../font/Kelmah-Bold.otf);
 }
 :root {
-  --background-light: linear-gradient(174deg, rgba(129,224,242,1) 0%, rgba(236,204,250,1) 22%, rgba(255,255,255,1) 48%, rgba(247,217,249,1) 79%, rgba(143,216,237,1) 99%);
-  --background-dark: linear-gradient(90deg, rgba(21, 9, 245, 0.733) 32%, rgba(239,255,0,1) 100%);;
-  --text-color-light: black;
+  --background-light: linear-gradient(90deg, rgba(21, 9, 245, 0.733) 32%, rgba(239,255,0,1) 100%);z
   --text-color-dark: white;
 }
 
